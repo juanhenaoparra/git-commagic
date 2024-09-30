@@ -36,7 +36,7 @@ func main() {
 
 	ctx := context.Background()
 
-	out, err := exec.Command("git", "diff").Output()
+	out, err := exec.Command("git", "diff", "--cached").Output()
 	if err != nil {
 		log.Fatalf("Failed to run git diff: %v", err)
 	}
